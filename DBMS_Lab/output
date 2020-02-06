@@ -1,0 +1,257 @@
+
+ERROR:
+ORA-04043: object person does not exist
+Show tables handled. 
+
+Table PERSON created.
+
+Name      Null?    Type         
+--------- -------- ------------ 
+DRIVER_ID NOT NULL VARCHAR2(10) 
+NAME               VARCHAR2(20) 
+ADDRESS            VARCHAR2(30) 
+
+Table CAR created.
+
+Name    Null?    Type         
+------- -------- ------------ 
+REG_NUM NOT NULL VARCHAR2(10) 
+MODEL            VARCHAR2(10) 
+YEAR             NUMBER(38)   
+
+Table ACCIDENT created.
+
+Name          Null?    Type         
+------------- -------- ------------ 
+REPORT_NUM    NOT NULL NUMBER(38)   
+ACCIDENT_DATE          DATE         
+LOCATION               VARCHAR2(30) 
+
+Table OWNS created.
+
+Name      Null?    Type         
+--------- -------- ------------ 
+DRIVER_ID NOT NULL VARCHAR2(10) 
+REG_NUM   NOT NULL VARCHAR2(10) 
+
+Table PARTICIPATED created.
+
+Name          Null?    Type         
+------------- -------- ------------ 
+DRIVER_ID     NOT NULL VARCHAR2(10) 
+REG_NUM       NOT NULL VARCHAR2(10) 
+REPORT_NUM    NOT NULL NUMBER(38)   
+DAMAGE_AMOUNT          NUMBER(38)   
+
+Commit complete.
+
+
+Substitution cancelled
+Name      Null?    Type         
+--------- -------- ------------ 
+DRIVER_ID NOT NULL VARCHAR2(10) 
+NAME               VARCHAR2(20) 
+ADDRESS            VARCHAR2(30) 
+old:insert into person values('&driver_id','&name','&address')
+new:insert into person values('c1','Vivek','shantinagar')
+
+1 row inserted.
+
+old:insert into person values('&driver_id','&name','&address')
+new:insert into person values('c2','yaseen','jayanagar')
+
+1 row inserted.
+
+old:insert into person values('&driver_id','&name','&address')
+new:insert into person values('c3','akash','shivajinagar')
+
+1 row inserted.
+
+old:insert into person values('&driver_id','&name','&address')
+new:insert into person values('c4','sunil','vijaynagara')
+
+1 row inserted.
+
+old:insert into person values('&driver_id','&name','&address')
+new:insert into person values('c5','arbaz','BTM')
+
+1 row inserted.
+
+Name    Null?    Type         
+------- -------- ------------ 
+REG_NUM NOT NULL VARCHAR2(10) 
+MODEL            VARCHAR2(10) 
+YEAR             NUMBER(38)   
+old:insert into CAR values('&reg_num','&model','&year')
+new:insert into CAR values('KA052256','BMW','2020')
+
+1 row inserted.
+
+old:insert into CAR values('&reg_num','&model','&year')
+new:insert into CAR values('KA057894','indica','2016')
+
+1 row inserted.
+
+old:insert into CAR values('&reg_num','&model','&year')
+new:insert into CAR values('KA017204','ford','2015')
+
+1 row inserted.
+
+old:insert into CAR values('&reg_num','&model','&year')
+new:insert into CAR values('KA036556','Audi','2019')
+
+1 row inserted.
+
+old:insert into CAR values('&reg_num','&model','&year')
+new:insert into CAR values('KA04458','Maruti','2017')
+
+1 row inserted.
+
+Name          Null?    Type         
+------------- -------- ------------ 
+REPORT_NUM    NOT NULL NUMBER(38)   
+ACCIDENT_DATE          DATE         
+LOCATION               VARCHAR2(30) 
+old:insert into accident values('&report_num','&accident_date','&location')
+new:insert into accident values('001','03-MAR-2016','Silk Board')
+
+1 row inserted.
+
+
+Substitution cancelled
+
+Error starting at line : 36 in command -
+update ACCIDENT set report_num = R1 where report_num = 1
+Error at Command Line : 36 Column : 34
+Error report -
+SQL Error: ORA-00904: "R1": invalid identifier
+00904. 00000 -  "%s: invalid identifier"
+*Cause:    
+*Action:
+
+1 row updated.
+
+old:insert into accident values('&report_num','&accident_date','&location')
+new:insert into accident values('112','20-Dec-2014','Banashankari')
+
+1 row inserted.
+
+old:insert into accident values('&report_num','&accident_date','&location')
+new:insert into accident values('113','05-Nov-2015','KBS')
+
+1 row inserted.
+
+old:insert into accident values('&report_num','&accident_date','&location')
+new:insert into accident values('114','11-Jul-2018','Basvangudi')
+
+1 row inserted.
+
+old:insert into accident values('&report_num','&accident_date','&location')
+new:insert into accident values('115','20-Sep-2019','Hanumanthnagara')
+
+1 row inserted.
+
+Name      Null?    Type         
+--------- -------- ------------ 
+DRIVER_ID NOT NULL VARCHAR2(10) 
+REG_NUM   NOT NULL VARCHAR2(10) 
+
+Substitution cancelled
+
+Substitution cancelled
+old:insert into owns values('&driver_id','&reg_num')
+new:insert into owns values('c1','KA052256')
+
+1 row inserted.
+
+old:insert into owns values('&driver_id','&reg_num')
+new:insert into owns values('c2','KA057894')
+
+1 row inserted.
+
+old:insert into owns values('&driver_id','&reg_num')
+new:insert into owns values('c3','KA017204')
+
+1 row inserted.
+
+old:insert into owns values('&driver_id','&reg_num')
+new:insert into owns values('c4','KA036556')
+
+1 row inserted.
+
+old:insert into owns values('&driver_id','&reg_num')
+new:insert into owns values('c5','KA04458')
+
+1 row inserted.
+
+Name      Null?    Type         
+--------- -------- ------------ 
+DRIVER_ID NOT NULL VARCHAR2(10) 
+REG_NUM   NOT NULL VARCHAR2(10) 
+Name          Null?    Type         
+------------- -------- ------------ 
+DRIVER_ID     NOT NULL VARCHAR2(10) 
+REG_NUM       NOT NULL VARCHAR2(10) 
+REPORT_NUM    NOT NULL NUMBER(38)   
+DAMAGE_AMOUNT          NUMBER(38)   
+
+Substitution cancelled
+old:insert into participated values('&driver_id','&reg_num','&report_num','&damage_amount')
+new:insert into participated values('c1','KA052256','111','27500')
+
+1 row inserted.
+
+old:insert into participated values('&driver_id','&reg_num','&report_num','&damage_amount')
+new:insert into participated values('c2','KA057894','112','28640')
+
+1 row inserted.
+
+old:insert into participated values('&driver_id','&reg_num','&report_num','&damage_amount')
+new:insert into participated values('c3','KA017204','113','12456')
+
+1 row inserted.
+
+old:insert into participated values('&driver_id','&reg_num','&report_num','&damage_amount')
+new:insert into participated values('c4','KA036556','114','3245')
+
+1 row inserted.
+
+old:insert into participated values('&driver_id','&reg_num','&report_num','&damage_amount')
+new:insert into participated values('c5','KA04458','115','2645')
+
+1 row inserted.
+
+
+Commit complete.
+
+
+Error starting at line : 54 in command -
+delete from participated where damage_amount<avg(damage_amount)
+Error at Command Line : 54 Column : 46
+Error report -
+SQL Error: ORA-00934: group function is not allowed here
+00934. 00000 -  "group function is not allowed here"
+*Cause:    
+*Action:
+
+Error starting at line : 56 in command -
+delete from paticipated
+where damage_amount < 14897.2
+Error at Command Line : 56 Column : 13
+Error report -
+SQL Error: ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+
+3 rows deleted.
+
+
+Commit complete.
+
+
+1 row updated.
+
+
+Commit complete.
+
