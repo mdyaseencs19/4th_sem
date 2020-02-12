@@ -3,9 +3,12 @@ Write a program to implement
   a) Bubble Sort.
   b) Selection Sort.
 Note: Two functions should be implemented in a single program, functions should be called based on input provided in switch case.
+
+Also Calculate the Time taken To Sort 'n' Elements.
 *******************************************************************************************************************/
 
-#include<stdio.h>
+#include <stdio.h>
+#include <time.h>
 
 /*C Function To Sort the Given Array Using Bubble Sort.*/
 void Bubble_Sort(int A[],int n)
@@ -59,6 +62,8 @@ int main()
 {
 	int A[1000],i;
 	int choice,n;
+	clock_t start, end;
+    	double time_required;
 	printf("\nThe Choices Are : \n");
 	printf("\n1. Bubble Sort.\n2.Selection Sort.\n\nEnter Your Choice : ");
 	scanf("%d",&choice);
@@ -72,7 +77,11 @@ int main()
 				 {
 				 	scanf("%d",&A[i]);
 				 }
-				 Bubble_Sort(A,n);
+				 start = clock();
+					 Bubble_Sort(A,n);     
+			     	 end = clock();
+     			 	 time_required = ((double) (end - start)) / CLOCKS_PER_SEC;
+     			 	 printf("\nTime Taken For Sorting %d Elements is : %f\n",n,time_required);
 				 break;
 				 
 		case 2 : printf("\nEnter The Size Of Array : ");
@@ -82,8 +91,12 @@ int main()
 				 {
 				 	scanf("%d",&A[i]);
 				 }
-				 Selection_Sort(A,n);
-				 break;				
+				 start = clock();
+					 Selection_Sort(A,n);     
+			     	 end = clock();
+     			 	 time_required = ((double) (end - start)) / CLOCKS_PER_SEC;
+     			 	 printf("\nTime Taken For Sorting %d Elements is : %f\n",n,time_required);
+				 break;
 				 
 		default : printf("\nInvalid Choice..!\n");				  
 	}
