@@ -1,0 +1,179 @@
+
+Table STUDENT created.
+
+Table FACULTY created.
+
+Table CLASS created.
+
+Table ENROLLED created.
+
+
+Name     Null?    Type         
+-------- -------- ------------ 
+CNAME             VARCHAR2(30) 
+MEETS_AT          TIMESTAMP(6) 
+ROOM              VARCHAR2(30) 
+FID      NOT NULL NUMBER(38)   
+
+
+Name  Null?    Type         
+----- -------- ------------ 
+SNUM  NOT NULL NUMBER(38)   
+SNAME          VARCHAR2(30) 
+MAJOR          VARCHAR2(30) 
+LVL            VARCHAR2(20) 
+AGE            NUMBER(38)   
+
+
+
+
+
+Name  Null?    Type         
+----- -------- ------------ 
+SNUM  NOT NULL NUMBER(38)   
+CNAME          VARCHAR2(30) 
+
+
+Name     Null?    Type         
+-------- -------- ------------ 
+CNAME    NOT NULL VARCHAR2(30) 
+MEETS_AT          TIMESTAMP(6) 
+ROOM              VARCHAR2(30) 
+FID      NOT NULL NUMBER(38)   
+
+
+Name  Null?    Type         
+----- -------- ------------ 
+SNUM  NOT NULL NUMBER(38)   
+CNAME          VARCHAR2(30) 
+
+
+Table ENROLLED created.
+
+Name  Null?    Type         
+----- -------- ------------ 
+SNUM  NOT NULL NUMBER(38)   
+CNAME NOT NULL VARCHAR2(30) 
+
+
+Name  Null?    Type         
+----- -------- ------------ 
+SNUM  NOT NULL NUMBER(38)   
+CNAME NOT NULL VARCHAR2(30) 
+
+
+Name  Null?    Type         
+----- -------- ------------ 
+SNUM  NOT NULL NUMBER(38)   
+CNAME          VARCHAR2(30) 
+
+
+Name     Null?    Type         
+-------- -------- ------------ 
+CNAME    NOT NULL VARCHAR2(30) 
+MEETS_AT          TIMESTAMP(6) 
+ROOM              VARCHAR2(30) 
+FID      NOT NULL NUMBER(38)   
+
+
+Name     Null?    Type         
+-------- -------- ------------ 
+CNAME    NOT NULL VARCHAR2(30) 
+MEETS_AT          TIMESTAMP(6) 
+ROOM              VARCHAR2(30) 
+FID      NOT NULL NUMBER(38)   
+
+
+
+Name   Null?    Type         
+------ -------- ------------ 
+FID    NOT NULL NUMBER(38)   
+FNAME           VARCHAR2(30) 
+DEPTID          NUMBER(38)   
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+Name   Null?    Type         
+------ -------- ------------ 
+FID    NOT NULL NUMBER(38)   
+FNAME           VARCHAR2(30) 
+DEPTID          NUMBER(38)   
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+Name     Null?    Type         
+-------- -------- ------------ 
+CNAME    NOT NULL VARCHAR2(30) 
+MEETS_AT          TIMESTAMP(6) 
+ROOM              VARCHAR2(30) 
+FID      NOT NULL NUMBER(38)   
+
+
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+Name  Null?    Type         
+----- -------- ------------ 
+SNUM  NOT NULL NUMBER(38)   
+CNAME NOT NULL VARCHAR2(30) 
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+Name   Null?    Type         
+------ -------- ------------ 
+FID    NOT NULL NUMBER(38)   
+FNAME           VARCHAR2(30) 
+DEPTID          NUMBER(38)   
+
+Commit complete.
+
